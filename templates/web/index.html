@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+{% include 'web/includes/header.html' %}
+<div id="content" class="site-content center-relative">        
+
+    <!-- Home Section -->
+    <div id="home" class="section no-page-title">                   
+        <div class="section-wrapper block content-1170 center-relative">                                                
+            <div class="content-wrapper">                           
+                <h1 class="big-text">
+                    FIFA WORLD CUP 2022 
+                </h1>
+                <h4 class="home-page">
+                   Register your team here 
+                </h4>
+                <div class="button-holder text-left">
+                    <a href="{% url 'registration_completed:registration_form' %}" class="button">Register</a>
+                </div>
+            </div>                        
+        </div>
+    </div> 
+
+
+{% endblock %}

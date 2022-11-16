@@ -1,0 +1,17 @@
+{% extends "user/auth_base.html" %} {% load static %} {% block content %}
+        <form class="login-form"  action="" method="post">
+            {% csrf_token %}
+            <label>
+                <input type="text" name="username" required placeholder="username">
+            </label>
+            <label>
+                <input type="password" name="password" required placeholder="Password">
+            </label>
+            {% if error %}
+            <p class="error-message">{{message}}</p>
+            {% endif %}
+            <a href="{% url 'user:login' %}"><input type="submit" value="Login"></a>
+        </form>
+        <h5><a href="#">Forgot password</a></h5>  
+          {% comment %} <a href="{% url 'user:signup' %}">Create Account</a> {% endcomment %}
+{% endblock %}
