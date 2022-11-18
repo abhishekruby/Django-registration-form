@@ -7,6 +7,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include("web.urls", namespace="web")),
+    path('admin/', admin.site.urls),
     path('register/', include("registration_completed.urls", namespace="registration_completed")),
     path('user/', include("user.urls", namespace="user")),
 ]

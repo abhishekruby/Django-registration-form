@@ -7,4 +7,5 @@ app_name = "web"
 
 urlpatterns = [
     path('',views.index, name="index"),
+    path('userPage/',views.userPage, name="userPage"),
 ]

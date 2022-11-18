@@ -1,24 +1,28 @@
+import datetime
+
 from django.db import models
 from django import forms
 
 # Create your models here.
 
 GENDER_CHOICES = (
+    ('', 'Gender'),
     ('M', 'Male'),
     ('F', 'Female')
 )
 
 DEGREE_CHOICES = (
+    ('','select'),
     ('bca','BCA'),
     ('b-tech', 'B-Tech'),
     ('bsc','BSC'),
+    ('other','OTHER'),
 )
 
 class Form(models.Model):
-    image = models.ImageField(upload_to="students_Photo/")
     first_name = models.CharField(max_length=120);
     last_name = models.CharField(max_length=120);
-    date_of_birth = models.DateField()
+    date_of_birth = models.DateField(default=datetime.date.today())
     gender = models.CharField(max_length=120,choices=GENDER_CHOICES);
     degree = models.CharField(max_length=120,choices=DEGREE_CHOICES);
     email = models.EmailField();

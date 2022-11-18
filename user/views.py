@@ -15,7 +15,7 @@ def login(request):
             if user is not None:
                 auth_login(request,user)
 
-                return HttpResponseRedirect("/")
+                return HttpResponseRedirect("/userPage")
        
         context={
                 "title" : "Login",
@@ -32,3 +32,4 @@ def login(request):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse("web:index"))        
+
