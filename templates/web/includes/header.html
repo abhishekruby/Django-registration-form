@@ -1,25 +1,14 @@
 {% load static %}
-<header>
-    <h1>
-        <a href="{% url 'web:index' %}" >
-            <img
-                src="{% static 'images/logo.png' %}"
-                alt="Logo"
-            />
-        </a>
-    </h1>
-    <div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h1 class="text-light" href="#">Coding is Future</h1>
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         {% if request.user.is_authenticated %}
-        <h3>Welcome {{request.user.username}}</h3>
-            <a href="{% url 'user:logout'%}" class="login"> Logout </a>
+        <h3 class="mx-5 text-light">Welcome {{request.user.username}}</h3>
+            <a href="{% url 'user:logout'%}" class=" mx-5 text-decoration-none p-3 border border-light rounded text-light"> Logout </a>
         {% else %}    
-            <a href="{% url 'user:login'%}" class="login"> Login </a>
+            <a href="{% url 'user:login'%}" class=" mx-5 text-decoration-none p-3 border border-light rounded text-light"> Login </a>
         {% endif %}
     </div>
-    <div id="hamburger-icon">
-        <img
-            src="{% static 'images/icons/hamburger.svg' %}"
-            alt="Hamburger"
-        />
-    </div>
-</header>
+  </nav>

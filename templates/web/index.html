@@ -3,21 +3,27 @@
 <div id="content" class="site-content center-relative">        
 
     <!-- Home Section -->
-    <div id="home" class="section no-page-title">                   
-        <div class="section-wrapper block content-1170 center-relative">                                                
-            <div class="content-wrapper">                           
-                <h1 class="big-text">
-                    FIFA WORLD CUP 2022 
-                </h1>
-                <h4 class="home-page">
-                   Register your team here 
-                </h4>
-                <div class="button-holder text-left">
-                    <a href="{% url 'registration_completed:registration_form' %}" class="button">Register</a>
-                </div>
-            </div>                        
+    <div>
+      
+        <!-- Background image -->
+        <div id="intro-example" class="p-5 text-center bg-image"
+          style="height:94vh;  background: url('https://www.computersciencedegreehub.com/wp-content/uploads/2016/02/what-is-coding-1024x683.jpg') no-repeat; background-size: cover;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);
+          margin: 220px 100px;">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white" style="padding: 120px;">
+                <h1 class="mb-3">Why We Love Coding </h1>
+                <h5 class="mb-4">
+                  Best & free exam conducting, Register your details here
+                </h5>
+                <a class="btn btn-outline-light btn-lg m-2" href="{% url 'registration_completed:registration_form' %}"
+                  role="button" rel="nofollow" target="_blank">Register</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> 
+        <!-- Background image -->
+      </div>
 
 
 {% endblock %}
