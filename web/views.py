@@ -21,6 +21,7 @@ def userPage(request):
     context={
         "students": students
     } 
+    
     return render(request, "user_page/index.html",context=context)
 
 
