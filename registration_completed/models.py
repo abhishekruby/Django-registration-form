@@ -6,9 +6,9 @@ from django import forms
 # Create your models here.
 
 GENDER_CHOICES = (
-    ('', 'Gender'),
-    ('M', 'Male'),
-    ('F', 'Female')
+    ('', 'Male'),
+    ('F', 'Female'),
+    ('O', 'Other')
 )
 
 DEGREE_CHOICES = (

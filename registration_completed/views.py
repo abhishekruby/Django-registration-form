@@ -32,7 +32,7 @@ def registration_form(request):
         data={
             "first_name":"Abhishek",
             "last_name":"Ruby",
-            "gender":"M",
+            "gender":"",
             "degree":"other",
             "email":"abhishekruby94@gmail.com",
             "number":"9727851561",
