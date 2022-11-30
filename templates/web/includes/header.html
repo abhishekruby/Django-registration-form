@@ -1,7 +1,7 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <h1 class="text-light" href="#">Coding is Future</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark py-3">
+    <h2> <a class="text-light text-decoration-none fs-1" href="{% url 'web:index' %}" >Coding is Future</a></h2>
   
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         {% if request.user.is_authenticated %}
