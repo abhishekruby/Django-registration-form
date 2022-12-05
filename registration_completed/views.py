@@ -12,7 +12,9 @@ def registration_form(request):
 
     if request.method == "POST":
         form = RegistrationForm(request.POST, request.FILES)
+
         if form.is_valid():
+            print(form)
             form.save();
             response_data = {
                     "title": "Successfully submitted",
@@ -23,6 +25,7 @@ def registration_form(request):
             }
             return HttpResponse(json.dumps(response_data), content_type='application/json')  
         else:
+            print("error")
             context={
             "form" : form
             }
@@ -32,7 +35,7 @@ def registration_form(request):
         data={
             "first_name":"Abhishek",
             "last_name":"Ruby",
-            "gender":"",
+            "gender":"M",
             "degree":"other",
             "email":"abhishekruby94@gmail.com",
             "number":"9727851561",

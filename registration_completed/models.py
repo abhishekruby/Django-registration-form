@@ -1,12 +1,13 @@
 import datetime
 
 from django.db import models
-from django import forms
+
 
 # Create your models here.
 
 GENDER_CHOICES = (
-    ('', 'Male'),
+    ('', 'Gender'),
+    ('M', 'Male'),
     ('F', 'Female'),
     ('O', 'Other')
 )
@@ -18,7 +19,6 @@ DEGREE_CHOICES = (
     ('bsc','BSC'),
     ('other','OTHER'),
 )
-
 class Form(models.Model):
     first_name = models.CharField(max_length=120);
     last_name = models.CharField(max_length=120);
@@ -28,7 +28,5 @@ class Form(models.Model):
     email = models.EmailField();
     number = models.CharField(max_length=120);
     description = models.TextField();
-
-
     def __str__(self):
         return str(self.id)
